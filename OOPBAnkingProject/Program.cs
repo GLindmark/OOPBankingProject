@@ -5,19 +5,32 @@ namespace OOPBAnkingProject {
 
         static void Main(string[] args) {
 
-            Savings sav = new Savings();
-            sav.Number = "1002";//the .Number is available, but is not in the Savings Class.  That is because it is inherited from Account
-            sav.Name = "Savings 1";
-            sav.IntRate = .05;
+            MoneyMarket monm = new MoneyMarket();
+            monm.Number = "1003";
+            monm.Name = "MoneyMarket 1";
+            monm.MMRate = .1;
 
-            sav.Deposit(200);
-            sav.Withdraw(100);
-            decimal interestTobePaid = sav.CalcInterest(6);//number of months of interest
-            sav.PayInterest(interestTobePaid);
-            decimal savbal = sav.GetBalance();
-            Console.WriteLine($"Saving balance is {savbal}");
+            monm.Deposit(2000);
+            monm.Withdraw(1000);
+            monm.PayInterest(12);
 
-            //sav.Deposit(10);//always begin the line with the variable
+            Console.WriteLine($"MoneyMarket Balance is {monm.GetBalance()}");
+
+
+
+            //Savings sav = new Savings();
+            //sav.Number = "1002";//the .Number is available, but is not in the Savings Class.  That is because it is inherited from Account
+            //sav.Name = "Savings 1";
+            //sav.IntRate = .05;
+
+            //sav.Deposit(200);
+            //sav.Withdraw(100);
+            //decimal interestTobePaid = sav.CalcInterest(6);//number of months of interest
+            //sav.PayInterest(interestTobePaid);
+            //decimal savbal = sav.GetBalance();
+            //Console.WriteLine($"Saving balance is {savbal}");
+
+            ////sav.Deposit(10);//always begin the line with the variable
             //sav.Withdraw(10);
             //decimal balance = sav.GetBalance();
             //Console.WriteLine($"Account Balance is {balance} (should be 10)");//added the (should be 10) to verify result
