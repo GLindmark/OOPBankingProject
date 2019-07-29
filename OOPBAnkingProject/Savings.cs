@@ -7,6 +7,10 @@ namespace OOPBAnkingProject {
                                    //All 'Public' from Account is available
         public double IntRate { get; set; } = 0.03;
 
+        public override string Print() {
+            return base.Print()+ $" | {IntRate}";
+        }
+
         public void  PayInterest(decimal amountofInterest) {
             this.Deposit(amountofInterest);
         }

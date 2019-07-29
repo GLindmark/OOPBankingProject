@@ -7,15 +7,18 @@ namespace OOPBAnkingProject {
 
         public double MMRate { get; set; } = 0.03;
 
-        
-            public void PayInterest(int months) {
-                    double interestTobePaid =
-                    this.MMRate / 12 * months * (double)this.GetBalance();
-            
+        public override string Print() {
+            return base.Print() + $" | {MMRate}";
+
+
+            void PayInterest(int months) {
+                double interestTobePaid =
+                this.MMRate / 12 * months * (double)this.GetBalance();
+
                 decimal intTobePaidAsDecimal = (decimal)interestTobePaid;
                 this.Deposit(intTobePaidAsDecimal);
-                  }
-                                                         
+            }
+
             /*
             public double IntRate { get; set; } = 0.03;
 
@@ -29,4 +32,5 @@ namespace OOPBAnkingProject {
             }*/
 
         }
+    }
 }
