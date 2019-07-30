@@ -10,14 +10,21 @@ namespace OOPBAnkingProject {
         public override string Print() {
             return base.Print() + $" | {MMRate}";
 
-
-            void PayInterest(int months) {
+/*
+            public void PayInterest(int months) {
                 double interestTobePaid =
                 this.MMRate / 12 * months * (double)this.GetBalance();
 
                 decimal intTobePaidAsDecimal = (decimal)interestTobePaid;
                 this.Deposit(intTobePaidAsDecimal);
             }
+
+                    public void PayInterest(int months) {
+            double interestToBePaid =
+                this.MMRate / 12 * months * (double)this.GetBalance();
+            decimal intToBePaidAsDecimal = (decimal)interestToBePaid;
+            this.Deposit(intToBePaidAsDecimal);
+        }
 
             /*
             public double IntRate { get; set; } = 0.03;

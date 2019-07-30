@@ -11,7 +11,7 @@ namespace OOPBAnkingProject {
         public  string Name { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public virtual string Print() {//added virtual on this line and override on the MoneyMarket and Savings Print lines
+        public virtual string Print() {//added virtual on this line before the TYPE and enter override on the MoneyMarket and Savings Print lines
             return $"{this.Number}  | {this.Balance}  |  {this.Name}";
 
         }

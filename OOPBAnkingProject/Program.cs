@@ -5,9 +5,18 @@ namespace OOPBAnkingProject {
 
         static void Main(string[] args) {
 
+            Checking chk1 = new Checking();
+            chk1.Number = "101";
+            chk1.Name = "My Checking Account";
+            chk1.Deposit(150);
+            chk1.pay(100, 20);
+/*
+
             Savings sav1 = new Savings();
 
             sav1.Number = "1005";
+            sav1.Name = "My Savings Account";
+            sav1.ChangeRate(0.02);
 
 
             MoneyMarket monm = new MoneyMarket();
@@ -18,13 +27,13 @@ namespace OOPBAnkingProject {
             monm.Deposit(2000);
             monm.Withdraw(1000);
             //monm.PayInterest(12);
-
-            Account[] accounts = new Account[]{ sav1, monm };
+*/
+            Account[] accounts = new Account[]{ chk1};
 
             foreach(Account acct in accounts) {
                 Console.WriteLine(acct.Print());
             }
-
+/*
             Console.WriteLine(sav1.Print());
             Console.WriteLine(monm.Print());
 
