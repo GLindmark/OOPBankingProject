@@ -5,6 +5,10 @@ namespace OOPBAnkingProject {
 
         static void Main(string[] args) {
 
+            //var acct1 = new Account();//cannot instantiate because it is Abstract
+
+            var dummy = new IDummy();
+
             Checking chk1 = new Checking();
             chk1.Number = "101";
             chk1.Name = "My Checking Account";

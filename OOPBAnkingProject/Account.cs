@@ -4,12 +4,14 @@ using System.Text;
 
 namespace OOPBAnkingProject {
 
-    public class Account {
+    public abstract class Account {//marking it 'abstract' prevents it from being instantiated
 
         public string Number { get; set; }
         private decimal Balance { get; set; } = 0;
         public  string Name { get; set; }
         public bool IsActive { get; set; } = true;
+
+        abstract public void Save();
 
         public virtual string Print() {//added virtual on this line before the TYPE and enter override on the MoneyMarket and Savings Print lines
             return $"{this.Number}  | {this.Balance}  |  {this.Name}";
